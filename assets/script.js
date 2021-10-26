@@ -1,23 +1,58 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
+let yourName = "Shane Morrison" 
 
-// First, tell us your name
-let yourName = "Shane Morrison" // HINT: Replace this with your own name!
+let gb = 0      
+let cc = 0      
+let sugar = 0   
 
-// We'll use these variables to track the counts of each cookie type
-let gb = 0      // Ginger bread
-let cc = 0      // Chocolate Chip
-let sugar = 0   // Sugar Sprinkle
-
-// Code to update name display 
 document.getElementById('credit').textContent = `Created by ${yourName}`
 
-// Event listener for clicks on the "+" button for Ginger Bread cookies
-document.getElementById('add-gb').addEventListener('click', function() {
-    // HINT: You can delete this console.log after you no longer need it!
-    console.log('Ginger bread + button was clicked!')
 
-    // TODO: Write the code to be run when the "+" button for "Ginger Bread" is clicked
+document.getElementById('add-gb').addEventListener('click', function()
+   {
+    gb++
+    getTotal()
+document.getElementById('qty-gb').textContent = `${gb}`   
+    })
+document.getElementById('minus-gb').addEventListener('click', function()
+   {
+    gb-- 
+    getTotal()
+document.getElementById('qty-gb').textContent = `${gb}`
+    })
+
+document.getElementById('add-cc').addEventListener('click', function()
+ {
+    cc++
+    getTotal()
+document.getElementById('qty-cc').textContent = `${cc}`   
+    
+   
 })
 
-// TODO: Hook up event listeners for the rest of the buttons
+document.getElementById('minus-cc').addEventListener('click', function()
+ {
+    cc--
+    getTotal()
+document.getElementById('qty-cc').textContent = `${cc}`
+    })
+
+document.getElementById('add-sugar').addEventListener('click', function()
+ {
+    sugar++
+    getTotal()
+document.getElementById('qty-sugar').textContent = `${sugar}`   
+  })
+
+document.getElementById('minus-sugar').addEventListener('click', function()
+   {
+    sugar--
+    getTotal()
+document.getElementById('qty-sugar').textContent = `${sugar}`
+    })
+
+function getTotal()
+  {
+    let total=gb+cc+sugar
+document.getElementById('qty-total').textContent = `${total}`
+    }
+
